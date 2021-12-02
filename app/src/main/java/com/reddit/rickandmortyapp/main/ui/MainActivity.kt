@@ -24,7 +24,6 @@ class MainActivity : BaseMvpActivity<MainContract.View, MainContract.Presenter>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         setupRecyclerView()
         presenter.loadData()
     }
@@ -59,3 +58,9 @@ class MainActivity : BaseMvpActivity<MainContract.View, MainContract.Presenter>(
         pagination.reset(items.size)
     }
 }
+
+/** TODO
+ * 1) Implement Interactor with local storage
+ * 2) Handle Network Error
+ * 3) Add Shimmer
+ * */
