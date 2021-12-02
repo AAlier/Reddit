@@ -25,7 +25,7 @@ class MainActivity : BaseMvpActivity<MainContract.View, MainContract.Presenter>(
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupRecyclerView()
-        presenter.loadData()
+        presenter.loadIfNecessary()
     }
 
     private fun setupRecyclerView() {

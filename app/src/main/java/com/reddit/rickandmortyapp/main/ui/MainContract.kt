@@ -12,5 +12,6 @@ interface MainContract {
 
     interface Presenter : MvpPresenter<View> {
         fun loadData(isRefresh: Boolean = false)
+        fun loadIfNecessary()
     }
 }

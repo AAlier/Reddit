@@ -16,6 +16,11 @@ class MainPresenter(
     private var page = 1
     private var job: Job? = null
 
+    override fun loadIfNecessary() {
+        if (data.isEmpty()) loadData()
+        else view?.showItems(data)
+    }
+
     override fun loadData(isRefresh: Boolean) {
         if (isRefresh) {
             page = 1
